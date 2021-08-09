@@ -1,1 +1,1 @@
-module.exports = {fit: require('./fitness')}
+module.exports = {workout: require('./workout')}
