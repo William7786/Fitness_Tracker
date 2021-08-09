@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
-const schema = mongoose.schema;
-const workout = new schema({
+const Schema = mongoose.Schema;
+const workout = new Schema({
     date:{
-        type: date,
+        type: Date,
         default:Date.now,
     },
     exercises:[
@@ -19,7 +19,22 @@ const workout = new schema({
                 type:Number,
                 required: "Enter the number of muinites the exercise took",
             },
+            weight:{
+                type:Number
+            },
+            reps:{
+                type:Number
+            },
+            sets:{
+                type:Number
+            },
+            distance:{
+                type:Number
             }
-        }
+
+            }
+    
     ]
 })
+const Workout = mongoose.model("Workout", workout);
+module.exports= Workout;
